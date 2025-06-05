@@ -1,88 +1,185 @@
-Daisy Clock
-Daisy Clock is a minimalistic desktop clock application built with React and Electron, featuring a daisy flower design. It includes timer, stopwatch, and alarm functionalities, with a transparent, frameless window that stays on top of other applications.
-Features
+# 🌼 Daisy Clock
 
-Daisy Flower Design: A custom SVG daisy with interactive petals to switch between modes (clock, timer, stopwatch, alarm).
-Modes:
-Clock: Displays the current time using the Orbitron font.
-Timer: Set a countdown timer.
-Stopwatch: Track elapsed time.
-Alarm: Set an alarm with notifications.
+A beautiful, minimalistic desktop clock application featuring an elegant daisy flower design. Built with React and Electron for a seamless cross-platform experience.
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)
+![React](https://img.shields.io/badge/React-18+-61DAFB.svg)
+![Electron](https://img.shields.io/badge/Electron-Latest-47848F.svg)
 
-Interactive Petals: Hover over petals to see tooltips (e.g., "Timer," "Stopwatch," "Alarm") and click to switch modes.
-Hover Banner: A banner with minimize and close buttons appears when hovering over the daisy.
-Window Properties:
-Size: 240x192 pixels (approximately 2x2 inches).
-Transparent and frameless design.
-Always on top of other windows.
+## ✨ Features
 
+### 🌸 Interactive Daisy Design
+- **Custom SVG Daisy**: Hand-crafted flower design with interactive petals
+- **Mode Switching**: Click on petals to switch between different functionalities
+- **Hover Effects**: Elegant tooltips and visual feedback on petal interaction
 
+### ⏰ Multiple Modes
+- **🕐 Clock**: Beautiful time display using the sleek Orbitron font
+- **⏱️ Timer**: Customizable countdown timer with notifications
+- **⏲️ Stopwatch**: Precise elapsed time tracking
+- **🔔 Alarm**: Set alarms with desktop notifications
 
-Installation
-For Users
+### 🖥️ Desktop Integration
+- **Always on Top**: Stays visible above other applications
+- **Transparent Design**: Seamless integration with your desktop
+- **Frameless Window**: Clean, distraction-free interface
+- **Compact Size**: 240×192 pixels (≈2×2 inches) - perfect for any screen
+- **Hover Controls**: Minimize and close buttons appear on hover
 
-Download the installer for your platform:
-Windows: Daisy Clock Setup.exe (available in releases).
-macOS: Daisy Clock.dmg (available in releases, requires a macOS machine to build).
-Linux: Daisy Clock.AppImage (available in releases, requires a Linux machine to build).
+## 📥 Installation
 
+### For Users
 
-Run the installer and follow the on-screen instructions.
-Launch the app to start using Daisy Clock.
+#### Windows
+1. Download `Daisy Clock Setup.exe` from the [latest release](../../releases/latest)
+2. Run the installer and follow the setup wizard
+3. Launch Daisy Clock from your desktop or Start menu
 
-For Developers
+#### macOS
+1. Download `Daisy Clock.dmg` from the [latest release](../../releases/latest)
+2. Mount the DMG file and drag Daisy Clock to Applications
+3. Launch from Applications folder (you may need to allow the app in Security & Privacy settings)
 
-Clone the repository:git clone <your-repo-url>
+#### Linux
+1. Download `Daisy Clock.AppImage` from the [latest release](../../releases/latest)
+2. Make it executable: `chmod +x Daisy\ Clock.AppImage`
+3. Run the AppImage file
+
+### For Developers
+
+```bash
+# Clone the repository
+git clone https://github.com/aditi04/daisy-clock.git
 cd daisy-clock
 
+# Install dependencies
+npm install
 
-Install dependencies:npm install
+# Start development server
+npm run electron-dev
 
+# Build for production
+npm run build
 
-Start the app in development mode:npm run electron-dev
+# Package the application
+npm run package
+```
 
+## 🎯 Usage
 
-Build and package the app:npm run package
+### Mode Navigation
+- **Hover** over daisy petals to see mode tooltips
+- **Click** any petal to switch modes instantly
+- The center displays your current mode's interface
 
+### Window Controls
+- **Hover** over the daisy to reveal the control banner
+- **Minimize**: Click the minimize button to hide to system tray
+- **Close**: Click the close button to exit the application
 
+### Mode-Specific Controls
 
-Usage
+#### Timer Mode
+- Set your desired countdown time
+- Click start to begin the timer
+- Receive desktop notifications when time expires
 
-Switch Modes: Hover over the daisy petals to see tooltips, then click a petal to switch between clock, timer, stopwatch, or alarm.
-Minimize/Close: Hover over the daisy to reveal the banner, then click the minimize or close button.
-Always On Top: The app stays on top of other windows for easy access.
+#### Stopwatch Mode
+- Start, pause, and reset functionality
+- Precise time tracking with millisecond accuracy
+- Perfect for timing activities or exercises
 
-Screenshots
-(Tip: Add screenshots of the app in action by placing images in a screenshots/ folder and linking them here, e.g., ![Daisy Clock](screenshots/daisy-clock.png).)
-Development
+#### Alarm Mode
+- Set multiple alarms for different times
+- Choose custom notification sounds
+- Snooze functionality available
 
-Tech Stack:
-Frontend: React for the UI, with a custom SVG for the daisy design.
-Backend: Electron for creating the desktop app.
-Styling: CSS for layout and hover effects.
+## 🛠️ Development
 
+### Tech Stack
+- **Frontend**: React 18+ with modern hooks
+- **Desktop**: Electron for cross-platform compatibility
+- **Styling**: Pure CSS with smooth animations
+- **Typography**: Orbitron font for digital clock aesthetics
 
-Directory Structure:
-src/: React components and assets.
-public/: Static assets like icons and fonts.
-build/: Output of the React build, including electron.js (copied from main.js).
-dist/: Packaged app output.
+### Project Structure
+```
+daisy-clock/
+├── src/                    # React source code
+│   ├── components/         # React components
+│   ├── styles/            # CSS stylesheets
+│   └── assets/            # Images and icons
+├── public/                # Static assets
+├── build/                 # React build output
+├── dist/                  # Packaged applications
+├── main.js               # Electron main process
+└── package.json          # Project configuration
+```
 
+### Build Scripts
+```bash
+npm run start         # Start React development server
+npm run build         # Build React for production
+npm run electron      # Start Electron (requires built React app)
+npm run electron-dev  # Start Electron with hot reload
+npm run package       # Package app for current platform
+npm run dist          # Create distributable packages
+```
 
+## 🤝 Contributing
 
-Contributing
+We welcome contributions! Here's how to get started:
 
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Commit your changes (git commit -m "Add your feature").
-Push to the branch (git push origin feature/your-feature).
-Open a pull request.
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+3. **Commit** your changes: `git commit -m 'Add amazing feature'`
+4. **Push** to the branch: `git push origin feature/amazing-feature`
+5. **Open** a Pull Request
 
-License
-MIT License (or specify your preferred license).
-Acknowledgments
+### Development Guidelines
+- Follow React best practices and hooks patterns
+- Maintain the existing code style and formatting
+- Test your changes across different platforms when possible
+- Update documentation for any new features
 
-Orbitron font for the clock display.
-Electron and React communities for their amazing tools.
+## 📋 Roadmap
 
+- [ ] **Themes**: Multiple daisy color schemes
+- [ ] **Sound Customization**: Custom notification sounds
+- [ ] **Timezone Support**: Multiple timezone display
+- [ ] **Weather Integration**: Optional weather display
+- [ ] **Keyboard Shortcuts**: Quick mode switching
+- [ ] **Settings Panel**: Persistent user preferences
+
+## 🐛 Known Issues
+
+- macOS may require security approval for first launch
+- Linux AppImage may need manual executable permissions
+- Timer notifications require system notification permissions
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **[Orbitron Font](https://fonts.google.com/specimen/Orbitron)** - For the beautiful digital clock typography
+- **[React Team](https://reactjs.org/)** - For the amazing UI framework
+- **[Electron Team](https://www.electronjs.org/)** - For making desktop apps accessible
+- **Community Contributors** - Thank you for your valuable feedback and contributions
+
+## 📞 Support
+
+Having issues? Here's how to get help:
+
+- 🐛 **Bug Reports**: [Open an issue](../../issues/new?template=bug_report.md)
+- 💡 **Feature Requests**: [Request a feature](../../issues/new?template=feature_request.md)
+- 💬 **Questions**: [Start a discussion](../../discussions)
+
+---
+
+<div align="center">
+  <strong>Made with ❤️ and ☕</strong><br>
+  <em>If you find Daisy Clock useful, please consider giving it a ⭐!</em>
+</div>
