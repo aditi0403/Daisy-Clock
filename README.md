@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+Daisy Clock
+Daisy Clock is a minimalistic desktop clock application built with React and Electron, featuring a daisy flower design. It includes timer, stopwatch, and alarm functionalities, with a transparent, frameless window that stays on top of other applications.
+Features
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Daisy Flower Design: A custom SVG daisy with interactive petals to switch between modes (clock, timer, stopwatch, alarm).
+Modes:
+Clock: Displays the current time using the Orbitron font.
+Timer: Set a countdown timer.
+Stopwatch: Track elapsed time.
+Alarm: Set an alarm with notifications.
 
-## Available Scripts
 
-In the project directory, you can run:
+Interactive Petals: Hover over petals to see tooltips (e.g., "Timer," "Stopwatch," "Alarm") and click to switch modes.
+Hover Banner: A banner with minimize and close buttons appears when hovering over the daisy.
+Window Properties:
+Size: 240x192 pixels (approximately 2x2 inches).
+Transparent and frameless design.
+Always on top of other windows.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Installation
+For Users
 
-### `npm test`
+Download the installer for your platform:
+Windows: Daisy Clock Setup.exe (available in releases).
+macOS: Daisy Clock.dmg (available in releases, requires a macOS machine to build).
+Linux: Daisy Clock.AppImage (available in releases, requires a Linux machine to build).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Run the installer and follow the on-screen instructions.
+Launch the app to start using Daisy Clock.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For Developers
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone the repository:git clone <your-repo-url>
+cd daisy-clock
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Install dependencies:npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the app in development mode:npm run electron-dev
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Build and package the app:npm run package
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Usage
 
-### Code Splitting
+Switch Modes: Hover over the daisy petals to see tooltips, then click a petal to switch between clock, timer, stopwatch, or alarm.
+Minimize/Close: Hover over the daisy to reveal the banner, then click the minimize or close button.
+Always On Top: The app stays on top of other windows for easy access.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Screenshots
+(Tip: Add screenshots of the app in action by placing images in a screenshots/ folder and linking them here, e.g., ![Daisy Clock](screenshots/daisy-clock.png).)
+Development
 
-### Analyzing the Bundle Size
+Tech Stack:
+Frontend: React for the UI, with a custom SVG for the daisy design.
+Backend: Electron for creating the desktop app.
+Styling: CSS for layout and hover effects.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+Directory Structure:
+src/: React components and assets.
+public/: Static assets like icons and fonts.
+build/: Output of the React build, including electron.js (copied from main.js).
+dist/: Packaged app output.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Contributing
 
-### Deployment
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature).
+Commit your changes (git commit -m "Add your feature").
+Push to the branch (git push origin feature/your-feature).
+Open a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+License
+MIT License (or specify your preferred license).
+Acknowledgments
 
-### `npm run build` fails to minify
+Orbitron font for the clock display.
+Electron and React communities for their amazing tools.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
