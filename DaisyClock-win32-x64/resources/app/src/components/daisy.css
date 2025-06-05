@@ -1,0 +1,52 @@
+/* src/styles/daisy.css */
+
+.daisy-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: transparent;
+}
+
+.petal-button {
+  background-color: #C3B9DC;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  position: absolute;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+}
+
+.petal1 {
+  top: 10%;
+  left: 35%;
+}
+.petal2 {
+  top: 30%;
+  left: 70%;
+}
+.petal3 {
+  top: 70%;
+  left: 35%;
+}
+
+.daisy-center {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 100px;
+  height: 100px;
+  background-color: #FCE15D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Armio', sans-serif;
+  font-size: 24px;
+  color: black;
+}
+
+.clock-text {
+  font-weight: bold;
+}

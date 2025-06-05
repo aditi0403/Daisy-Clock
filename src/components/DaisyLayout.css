@@ -1,0 +1,299 @@
+.daisy-wrapper {
+  background: rgba(0, 0, 0, 0.01);
+  width: 192px;
+  height: 192px;
+  position: relative;
+  overflow: visible;
+}
+
+.svg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 192px;
+  height: 192px;
+}
+
+.center-content {
+  position: absolute;
+  top: 66px;
+  left: 71px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 12;
+  pointer-events: none;
+}
+
+.center-content * {
+  pointer-events: none;
+}
+
+.center-content button,
+.center-content input {
+  pointer-events: auto;
+}
+
+/* Text styling for center content */
+.center-content .text-sm {
+  font-size: 14px !important;
+  line-height: 1.2;
+  color: #000 !important;
+  font-weight: 600;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+/* Button container */
+.center-content .flex.space-x-1 {
+  margin-top: 2px;
+  gap: 2px;
+}
+
+/* Button styling - no background */
+.center-content button {
+  -webkit-app-region: no-drag;
+  width: 16px !important;
+  height: 16px !important;
+  background: transparent !important;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.center-content button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.1);
+}
+
+.center-content button svg {
+  width: 8px !important;
+  height: 8px !important;
+  color: #000 !important;
+}
+
+/* Input styling */
+.center-content input {
+  font-size: 9px !important;
+  padding: 1px 2px;
+  width: 35px !important;
+  height: 16px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  margin: 1px 0;
+  -webkit-app-region: no-drag;
+}
+
+.center-content input:focus {
+  outline: none;
+  border-color: #FCE15D;
+  box-shadow: 0 0 0 1px #FCE15D;
+}
+
+/* Timer-specific styles */
+.timer-mode .text-sm {
+  font-size: 12px !important; /* Smaller time display */
+  margin-bottom: 1px;
+}
+
+.timer-mode input.timer-input {
+  width: 30px !important; /* Smaller input */
+  height: 14px !important;
+  font-size: 8px !important;
+  margin: 0;
+}
+
+.timer-mode .flex.space-x-1 {
+  margin-top: 1px;
+  gap: 1px;
+}
+
+.timer-mode button.timer-btn {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.timer-mode button.timer-btn svg {
+  width: 7px !important;
+  height: 7px !important;
+}
+
+/* Banner styling */
+.banner {
+  z-index: 10;
+  max-width: 180px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  top: 4px !important;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.daisy-wrapper:hover .banner,
+.daisy-wrapper .banner.visible {
+  opacity: 1;
+}
+
+.banner button {
+  -webkit-app-region: no-drag;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.banner button:hover {
+  transform: scale(1.1);
+}
+
+/* Hide any default title bars or banners */
+.title-bar,
+.electron-titlebar,
+.app-titlebar {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Ensure proper stacking context */
+.daisy-wrapper * {
+  box-sizing: border-box;
+}
+
+/* Font import for Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+.font-orbitron {
+  font-family: 'Orbitron', monospace;
+}
+
+/* Component-specific button styles - no background */
+.stopwatch-btn, .timer-btn {
+  -webkit-app-region: no-drag;
+  width: 16px !important;
+  height: 16px !important;
+  background: transparent !important;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stopwatch-btn:hover, .timer-btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.1);
+}
+
+.stopwatch-btn svg, .timer-btn svg {
+  width: 8px !important;
+  height: 8px !important;
+  color: #000 !important;
+}
+
+/* Timer input styles */
+.timer-input {
+  font-size: 9px !important;
+  padding: 1px 2px;
+  width: 35px !important;
+  height: 16px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  margin: 1px 0;
+  -webkit-app-region: no-drag;
+}
+
+.timer-input:focus {
+  outline: none;
+  border-color: #FCE15D;
+  box-shadow: 0 0 0 1px #FCE15D;
+}
+
+.timer-input:disabled {
+  background: rgba(200, 200, 200, 0.5);
+  cursor: not-allowed;
+}
+
+/* Alarm input styles */
+.alarm-input {
+  font-size: 9px !important;
+  padding: 1px 2px;
+  width: 50px !important;
+  height: 16px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  margin: 1px 0;
+  -webkit-app-region: no-drag;
+}
+
+.alarm-input:focus {
+  outline: none;
+  border-color: #FCE15D;
+  box-shadow: 0 0 0 1px #FCE15D;
+}
+
+/* Alarm clear button */
+.alarm-clear-btn {
+  -webkit-app-region: no-drag;
+  font-size: 8px !important;
+  padding: 1px 4px;
+  background: rgba(255, 100, 100, 0.8) !important;
+  border: 1px solid rgba(200, 0, 0, 0.3);
+  border-radius: 3px;
+  color: #000;
+  cursor: pointer;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+
+.alarm-clear-btn:hover {
+  background: rgba(255, 100, 100, 1) !important;
+  transform: scale(1.05);
+}
+
+/* Alarm status */
+.alarm-status {
+  font-size: 8px;
+  color: #ff0000;
+  font-weight: bold;
+  margin-top: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+.text-xs {
+  font-size: 12px !important;
+}
